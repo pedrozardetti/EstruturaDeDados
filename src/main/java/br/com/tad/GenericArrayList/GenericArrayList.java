@@ -1,4 +1,4 @@
-package br.com.tad.ArrayList;
+package br.com.tad.GenericArrayList;
 
 public class GenericArrayList {
 
