@@ -21,11 +21,22 @@ public class ListaEncadeada<Tipo> {
     public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
     }
-    
+
     @Override
     public String toString() {
         return "ListaEncadeada [inicio=" + inicio + "]";
     }
+
+    public void adiciona (Tipo elemento) {
+        No<Tipo> celula = new No<Tipo>(elemento);
+        if (this.inicio  == null &&  this.fim == null) {
+            this.inicio = celula;
+            this.fim = celula;
+        }  else {
+            this.fim.setProximo(celula);
+            this.fim = celula;
+    }
+    this.tamanho++;
 
     
     
