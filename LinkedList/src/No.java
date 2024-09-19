@@ -6,4 +6,27 @@ public class No<Tipo> {
         this.elemento = elemento;
         this.proximo = null;
     }
+
+    public No(Tipo elemento, No<Tipo> proximo) {
+        this.elemento = elemento;
+        this.proximo = proximo;
+    }
+    
+    public Tipo getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(Tipo elemento) {
+        this.elemento = elemento;
+    }
+
+    public No<Tipo> getProximo() {
+        return proximo;
+    }
+
+    public void setProximo(No<Tipo> proximo) {
+        this.proximo = proximo;
+    }
+
+    
 }
