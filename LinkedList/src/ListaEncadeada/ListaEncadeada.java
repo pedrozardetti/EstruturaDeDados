@@ -1,3 +1,4 @@
+package ListaEncadeada;
 public class ListaEncadeada<Tipo> {
     private No inicio;
     private No fim;
@@ -39,8 +40,24 @@ public class ListaEncadeada<Tipo> {
     this.tamanho++;
 
     
-    
 }
+
+    public void remover (Tipo elemento) {
+        No anterior = null;
+        No atual = this.inicio;
+        for (int i = 0; i < this.getTamanho(); i++) {
+            if (atual.getElemento().equals(elemento)) {
+                anterior.setProximo(atual.getProximo());
+                atual = null;
+                this.tamanho--;
+                break;
+            }
+            anterior = atual;
+            atual = atual.getProximo();
+        }
+    }
+
+
 }
 
 
